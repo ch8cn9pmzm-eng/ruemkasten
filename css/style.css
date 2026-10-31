@@ -1,0 +1,62 @@
+:root{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --ink:#111827;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --accent:#1f2937;
+  --accent-2:#374151;
+  --soft:#f3f4f6;
+  --radius:16px;
+  --max:720px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:var(--font);background:
+    radial-gradient(700px 280px at 10% -10%, #e5e7eb, transparent 55%),
+    var(--bg);
+  color:var(--ink);line-height:1.55;min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(100% - 2rem,var(--max));margin-inline:auto}
+
+.site-header{padding:1.25rem 0 .5rem}
+.brand{display:inline-flex;align-items:center;gap:.6rem;color:var(--ink);font-weight:700;text-decoration:none}
+.brand img{height:36px;width:auto}
+
+.card-main{
+  margin:1rem auto 2rem;background:var(--card);border:1px solid var(--line);
+  border-radius:calc(var(--radius) + 4px);padding:1.75rem 1.4rem 1.5rem;
+  box-shadow:0 16px 40px rgba(17,24,39,.06);
+}
+.kicker{margin:0 0 .4rem;color:var(--muted);font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+h1{margin:0 0 .75rem;font-size:clamp(1.6rem,4vw,2rem);letter-spacing:-.02em}
+.intro{margin:0 0 1.4rem;color:var(--muted);font-size:1.05rem}
+
+.links{display:grid;gap:.75rem;margin:0 0 1.5rem}
+.link-card{
+  display:block;padding:1rem 1.05rem;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--soft);color:inherit;text-decoration:none;transition:border-color .15s, transform .15s;
+}
+.link-card:hover{border-color:#9ca3af;transform:translateY(-1px);text-decoration:none}
+.link-card strong{display:block;margin-bottom:.2rem;font-size:1.02rem}
+.link-card span{color:var(--muted);font-size:.92rem}
+
+.contact{
+  padding:1rem 1.05rem;border-radius:var(--radius);border:1px solid var(--line);background:#fff;
+}
+.contact p{margin:.2rem 0;color:var(--muted)}
+.contact a{font-weight:700}
+
+.nav-mini{display:flex;flex-wrap:wrap;gap:.75rem 1rem;margin-top:1.25rem;font-size:.92rem}
+.nav-mini a{color:var(--muted);font-weight:600}
+.nav-mini a:hover{color:var(--ink)}
+
+.legal-page{padding:1.5rem 0 3rem}
+.legal-page h1{margin-bottom:.5rem}
+.legal-page h2{margin:1.4rem 0 .45rem;font-size:1.05rem}
+.legal-page p,.legal-page address{color:var(--muted);font-style:normal}
+.site-footer{padding:0 0 2.5rem;color:var(--muted);font-size:.88rem}
